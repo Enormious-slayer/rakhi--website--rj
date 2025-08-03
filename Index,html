@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Rakshabandhan</title>
+  <style>
+    body {
+      margin: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #d63384, #6f42c1);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      border: 20px double #ffd6ff;
+      border-image: url('mandala-border.png') 30 round;
+      border-image-slice: 30;
+      border-image-width: 20px;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 30px;
+      color: #fcd5ce;
+    }
+    .quote {
+      font-size: 1.3rem;
+      margin: 15px 0;
+      font-style: italic;
+    }
+    .sister-section {
+      border: 5px dashed #fff;
+      border-radius: 25px;
+      margin: 20px auto;
+      max-width: 500px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      position: relative;
+      z-index: 2;
+    }
+    .sister-section h3 {
+      font-size: 1.8rem;
+      color: #ffd6ff;
+      transition: all 0.3s ease-in-out;
+    }
+    .sister-section h3:hover {
+      text-shadow: 0 0 8px #fff8dc, 0 0 12px #ffc0cb;
+      transform: scale(1.05);
+    }
+    .sister-section p {
+      font-size: 1.2rem;
+    }
+    textarea {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+      padding: 10px;
+      border: none;
+      resize: vertical;
+      font-size: 1rem;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .sparkle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .sparkle span {
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      animation: fall 5s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Pop-up styling */
+    .popup {
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff3cd;
+      color: #000;
+      padding: 20px 30px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      animation: slideIn 2s ease-in-out forwards;
+      z-index: 10;
+    }
+
+    @keyframes slideIn {
+      0% { top: -200px; }
+      40% { top: 100px; }
+      100% { top: -200px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkle"></div>
+
+  <div class="popup">🎉 Happy Rakshabandhan Sughandhan & Chuhiya! Love you both! 💖</div>
+
+  <h1>Happy Rakshabandhan 💖</h1>
+  <div class="quote">
+    "Sisters are the stars that make life sparkle with joy, love, and mischief."
+  </div>
+
+  <h2>My Beautiful Sisters</h2>
+
+  <div class="sister-section" id="sughandhan-section">
+    <h3>Sughandhan 💐</h3>
+    <p>My queen of calmness and care, your smile is my strength, your words are my warmth. You make life so graceful. 💕</p>
+  </div>
+
+  <div class="sister-section" id="chuhiya-section">
+    <h3>Chuhiya 🐭</h3>
+    <p>My little sparkle of mischief and madness! You are the cutest chaos in my life, and I wouldn’t trade that for anything. 😄</p>
+  </div>
+
+  <h2>Leave a Note for My Sisters ✍️</h2>
+  <textarea rows="4" placeholder="Write your wishes here..."></textarea>
+
+  <audio autoplay loop controls style="margin-top: 20px;">
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <footer>
+    Made by your handsome brother Major ❤️
+  </footer>
+
+  <script>
+    const sparkleContainer = document.querySelector('.sparkle');
+    for (let i = 0; i < 40; i++) {
+      const sparkle = document.createElement('span');
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.animationDelay = Math.random() * 5 + 's';
+      sparkleContainer.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
